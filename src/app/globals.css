@@ -1,0 +1,63 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1714;
+  --ink2: #3a3530;
+  --muted: #7a7368;
+  --pale: #b8b0a0;
+  --cream: #f8f5f0;
+  --paper: #ffffff;
+  --stripe: #f4f1ec;
+  --gold: #b8860b;
+  --gold-bg: #fdf8ee;
+  --gold-border: #e8d090;
+  --red: #c0392b;
+  --green: #1a7a4a;
+  --border: rgba(0,0,0,0.09);
+  --border-md: rgba(0,0,0,0.14);
+  --radius: 6px;
+}
+
+html, body {
+  height: 100%;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 4px; }
+
+@media print {
+  html, body {
+    width: 80mm !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    overflow: visible !important;
+  }
+
+  body * { visibility: hidden !important; }
+  #bill-printable, #bill-printable * { visibility: visible !important; }
+
+  /* The single preview instance becomes the print document. */
+  body > * { display: block !important; }
+  #bill-printable {
+    position: static !important;
+    display: block !important;
+    width: 72mm !important;
+    max-width: 72mm !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  @page { margin: 0; }
+}

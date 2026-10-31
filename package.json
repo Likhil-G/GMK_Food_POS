@@ -1,0 +1,24 @@
+{
+  "name": "gmk-food-court",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "npm run test:print",
+    "test:print": "tsc src/printing/printerConnectionManager.ts src/printing/printQueue.ts src/printing/escposBuilder.ts src/printing/billFormatter.ts src/printing/drivers/virtualPrinter.ts src/printing/printerService.ts src/printing/printerConfig.ts src/printing/drivers/windowsSpooler.ts src/printing/drivers/networkPrinter.ts src/printing/tests/printing.test.ts --outDir dist-test --module commonjs --target es2020 --esModuleInterop --skipLibCheck && node dist-test/tests/printing.test.js"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}

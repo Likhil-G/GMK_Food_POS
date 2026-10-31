@@ -1,0 +1,15 @@
+{
+  "connectionType": "windows-spooler",
+  "printerName": "Xprinter XP-80",
+  "networkHost": "192.168.1.100",
+  "networkPort": 9100,
+  "paperWidthMm": 80,
+  "columns": 48,
+  "autoCut": true,
+  "cutType": "partial",
+  "openCashDrawer": false,
+  "currencySymbol": "Rs.",
+  "feedLinesBeforeCut": 3,
+  "simulationMode": false
+}
+

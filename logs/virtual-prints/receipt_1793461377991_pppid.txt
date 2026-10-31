@@ -1,0 +1,28 @@
+[ GMK ]
+GMK Food Court
+Pure Taste · Pure Quality
+123 Food Street, Hyderabad - 500001
+Ph: +91 98765 43210 | GSTIN: 36AABCU9603R1ZM
+----------------------------------------------
+Bill No: GMK-914542           Date: 31/10/2026
+Table: Table 12                 Time: 08:30 PM
+Customer: Rahul Sharma
+----------------------------------------------
+ITEM                     QTY    RATE       AMT
+----------------------------------------------
+Menu Dish 1                2      70       140
+Menu Dish 2                3      90       270
+Menu Dish 3                1     110       110
+----------------------------------------------
+Subtotal                               Rs. 520
+GST (5%)                                Rs. 26
+==============================================
+TOTAL                                  Rs. 546
+----------------------------------------------
+Thank you for dining with us!
+Visit again
+
+
+
+
+[=== PAPER CUT ===]

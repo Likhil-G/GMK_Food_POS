@@ -1,0 +1,125 @@
+/* Bill — thermal receipt style */
+.bill {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  color: var(--ink);
+  width: 72mm;
+  max-width: 72mm;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.header { text-align: center; margin-bottom: 4px; }
+
+.logoText {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+
+.restaurantName {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 1px;
+  margin: 0 0 2px;
+}
+
+.tagline {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.address {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.divider {
+  color: rgba(0,0,0,0.18);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 11px;
+}
+
+.label {
+  color: var(--muted);
+  margin-right: 4px;
+}
+
+.table { width: 100%; border-collapse: collapse; margin: 4px 0; }
+
+.thItem  { text-align: left;   font-size: 10px; color: var(--muted); padding-bottom: 4px; font-weight: 700; letter-spacing: 0.5px; }
+.thQty   { text-align: center; font-size: 10px; color: var(--muted); padding-bottom: 4px; font-weight: 700; letter-spacing: 0.5px; }
+.thPrice { text-align: right;  font-size: 10px; color: var(--muted); padding-bottom: 4px; font-weight: 700; letter-spacing: 0.5px; }
+.thTotal { text-align: right;  font-size: 10px; color: var(--muted); padding-bottom: 4px; font-weight: 700; letter-spacing: 0.5px; }
+
+.tdItem  { text-align: left;   font-size: 11px; padding: 3px 0; }
+.tdQty   { text-align: center; font-size: 11px; padding: 3px 0; color: var(--muted); }
+.tdPrice { text-align: right;  font-size: 11px; padding: 3px 0; color: var(--muted); }
+.tdTotal { text-align: right;  font-size: 11px; padding: 3px 0; font-weight: 600; }
+
+.totals { display: flex; flex-direction: column; gap: 4px; }
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.grandRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+  padding-top: 6px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* Print override */
+@media print {
+  .bill {
+    color: #000;
+    width: 72mm;
+    max-width: 72mm;
+    height: auto;
+    min-height: 0;
+    margin: 0 auto;
+    padding: 0;
+    overflow: visible;
+    break-inside: auto;
+  }
+
+  /* .table, tr, .totals, .footer { break-inside: avoid; page-break-inside: avoid; } */
+  .tdItem { overflow-wrap: anywhere; word-break: normal; }
+  .restaurantName, .grandRow { color: #000; }
+  .thItem, .thQty, .thPrice, .thTotal { color: #555; }
+  .divider { color: #aaa; }
+  .label, .totalRow, .tdQty, .tdPrice, .address, .tagline, .footer { color: #555; }
+}
